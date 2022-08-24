@@ -1,0 +1,116 @@
+.collect {
+    max-width: 100vw;
+    height: 100vh;
+    margin-top: 144px;
+
+    &__bg-img {
+        max-width: 100%;
+        height: 118px;
+        background-image: url(../../image/collect.svg);
+        background-position: center;
+        background-size: 86%;
+        background-repeat: no-repeat;
+    }
+
+    &__list {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 0;
+    }
+
+    &__iteam {
+        max-width: 255px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    &__title {
+        font-family: 'Fraunces';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        color: #333D4B;
+        margin-top: 70px;
+    }
+
+    &__text {
+        width: 255px;
+        font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: #333D4B;
+    }
+}
+
+
+@media only screen and (max-width:1125) {
+    .collect {
+        max-width: 100vw;
+        min-height: 100vh;
+
+        &__img {
+            width: 240px;
+            height: 183px;
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__text {
+            width: 240px;
+        }
+    }
+}
+
+@media only screen and (max-width:1090px) {
+    .collect {
+        max-width: 100vw;
+        min-height: 100vh;
+        
+        &__list {
+            width: 100%;
+            flex-direction: column;
+        }
+        
+        &__iteam {
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        &__img {
+            order: 2;
+        }
+
+        &__title, &__text {
+            text-align: left;
+        }
+    }
+}
+
+@media only screen and (max-width:660px) {
+    .collect {
+        max-width: 100vw;
+        min-height: 100vh;
+
+        &__iteam {
+            flex-direction: column-reverse;
+        }
+
+        &__title, &__text {
+            text-align: center;
+        }
+    }
+}

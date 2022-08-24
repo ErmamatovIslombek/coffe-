@@ -1,0 +1,18 @@
+*, 
+*::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Fraunces', 'Barlow', sans-serif;
+}
+
+.container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    // border: 1px solid red;
+}
