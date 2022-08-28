@@ -19,7 +19,7 @@
         letter-spacing: 0.923077px;
         text-transform: uppercase;
         color: #83888F;
-        margin-right: 33px;
+        margin-right: 34px;
     }
 
     &__link:nth-child(3) {
@@ -27,6 +27,10 @@
     }
 
     &__burger {
+        display: none;
+    }
+
+    &__close {
         display: none;
     }
 }
@@ -38,11 +42,52 @@
         min-width: 100vw;
 
         &__navbar {
-            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            max-width: 100vw;
+            height: 230px;
+            background: #ffff;
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            box-shadow: 0 0 80px 103px #fff;
+            transform: translateY(-150%);
+            transition: transform .5s ease;
+            // display: none;
+        }
+
+        &__navbar--active {
+            transform: translateY(0);
+        }
+        
+        &__close {
+            margin: 35px 16px 0 0;
+            display: block;
+            align-self: flex-end;
+        }
+
+        &__link {
+            font-family: 'Fraunces';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            color: #333D4B;
+            margin-right: 0;
+            margin-top: 30px;
+
+            // &:nth-child(1) {
+            //     margin-top: 170px;
+            // }
         }
 
         &__burger {
             display: block;
         }
     }
+
+
 }
